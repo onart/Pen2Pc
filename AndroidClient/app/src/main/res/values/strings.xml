@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Pen2Pc</string>
+    <string name="appName">Pen2Pc</string>
+    <string name="subTitle">핸드폰 터치를 마우스 입력으로</string>
+    <string name="start">시작하기</string>
+    <string name="config">환경설정</string>
+    <string name="term">종료</string>
+    <string name="conn">NecTConIoN</string>
 </resources>
