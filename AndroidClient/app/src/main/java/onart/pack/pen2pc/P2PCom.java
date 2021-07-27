@@ -10,4 +10,8 @@ public class P2PCom extends Communicator{
     public void send() {
 
     }
+    @Override
+    public void recv() {
+
+    }
 }

@@ -19,4 +19,9 @@ public class BlueCom extends Communicator {
     public void send() {
         buf.clear();
     }
+
+    @Override
+    public void recv(){
+
+    }
 }

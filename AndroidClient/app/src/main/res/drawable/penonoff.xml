@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- active -->
+    <item android:state_activated="true">
+        <bitmap android:src="@android:drawable/ic_menu_edit" />
+    </item>
+    <!-- default -->
+    <item>
+        <bitmap android:src="@android:drawable/ic_menu_edit"
+            android:tint="#333333" />
+    </item>
+</selector>

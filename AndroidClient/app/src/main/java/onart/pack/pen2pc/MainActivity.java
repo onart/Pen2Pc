@@ -4,6 +4,7 @@ import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -17,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        cf.load(getPreferences(Context.MODE_PRIVATE));
+//        cf.load(getPreferences(Context.MODE_PRIVATE));
 
         /*
         findViewById(R.id.term).setOnClickListener(new View.OnClickListener() {
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         });
         람다 표현식 사용 전*/
         findViewById(R.id.term).setOnClickListener(v -> finish());
-        //findViewById(R.id.config).set
+        findViewById(R.id.start).setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), Board.class)));
     }
 
     @Override

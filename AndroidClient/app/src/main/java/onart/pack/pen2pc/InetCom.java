@@ -10,4 +10,9 @@ public class InetCom extends Communicator{
     public void send() {
 
     }
+
+    @Override
+    public void recv() {
+
+    }
 }

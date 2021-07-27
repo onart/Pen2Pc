@@ -5,5 +5,10 @@
     <string name="start">시작하기</string>
     <string name="config">환경설정</string>
     <string name="term">종료</string>
-    <string name="conn">NecTConIoN</string>
+    <string name="on">궤적 OFF</string>
+    <string name="off">궤적 ON</string>
+    <string name="eraser">궤적 지우기</string>
+    <string name="yes">예</string>
+    <string name="no">아니요</string>
+    <string name="sure2erase">정말로 지울까요?</string>
 </resources>

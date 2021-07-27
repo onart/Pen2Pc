@@ -10,4 +10,8 @@ public class WiredCom extends Communicator{
     public void send() {
 
     }
+    @Override
+    public void recv() {
+
+    }
 }

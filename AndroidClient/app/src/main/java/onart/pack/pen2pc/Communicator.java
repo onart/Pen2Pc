@@ -15,5 +15,6 @@ public abstract class Communicator {
         buf.add(y);
     }
 
-    public abstract void send();
+    public abstract void send();    //보낼 정보: 터치 지점, 내부 영역
+    public abstract void recv();    //받을 정보: 영향을 받을 window 영역
 }
