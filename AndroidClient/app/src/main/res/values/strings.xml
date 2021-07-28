@@ -11,4 +11,6 @@
     <string name="yes">예</string>
     <string name="no">아니요</string>
     <string name="sure2erase">정말로 지울까요?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
