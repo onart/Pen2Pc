@@ -14,4 +14,9 @@ public class P2PCom extends Communicator{
     public void recv() {
 
     }
+
+    @Override
+    public void echo() {
+
+    }
 }

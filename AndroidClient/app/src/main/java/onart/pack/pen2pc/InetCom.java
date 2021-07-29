@@ -15,4 +15,9 @@ public class InetCom extends Communicator{
     public void recv() {
 
     }
+
+    @Override
+    public void echo() {
+
+    }
 }

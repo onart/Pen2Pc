@@ -19,7 +19,7 @@ import android.widget.Toast;
 
 public class Board extends AppCompatActivity {
 
-    private FragmentContainerView paintSheet;
+    private DefaultPaint paintSheet;
     private boolean isLand;
     public static int xmaxp=0, ymaxp=0, xmaxl=0, ymaxl=0;
 
@@ -32,32 +32,18 @@ public class Board extends AppCompatActivity {
             v.setActivated(isOn);
             if(isOn){
                 ((Button)v).setText(R.string.off);
+                paintSheet.on();
             }
             else{
                 ((Button)v).setText(R.string.on);
+                paintSheet.off();
             }
         });
         findViewById(R.id.eraser).setOnClickListener(v -> clearRecord());
-        findViewById(R.id.eraser2).setOnClickListener(v -> Toast.makeText(getApplicationContext(),"예",Toast.LENGTH_SHORT).show());
+        findViewById(R.id.eraser2).setOnClickListener(v -> paintSheet.erase());
         paintSheet=findViewById(R.id.paintSheet);
-        paintSheet.setOnTouchListener((View.OnTouchListener) (v, event) -> {
-            float x=event.getX();
-            float y=event.getY();
-            switch (event.getActionMasked()){
-                case MotionEvent.ACTION_DOWN:
-                    v.performClick();
-                    Log.i("down",String.format("%f %f",x,y));
-                    break;
-                case MotionEvent.ACTION_UP:
-                    Log.i("up",String.format("%f %f",x,y));
-                    break;
-                case MotionEvent.ACTION_MOVE:
-                    Log.i("move",String.format("%f %f",x,y));
-                    break;
-            }
-            return true;
-        });
         //1. PC 연결
+
         //2. 스레드 시작
         //3. 스레드 종료
     }

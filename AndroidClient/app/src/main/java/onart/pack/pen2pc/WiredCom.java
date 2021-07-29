@@ -14,4 +14,9 @@ public class WiredCom extends Communicator{
     public void recv() {
 
     }
+
+    @Override
+    public void echo() {
+
+    }
 }

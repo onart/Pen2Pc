@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -15,16 +16,16 @@
         android:padding="20dp"
         >
 
-        <androidx.fragment.app.FragmentContainerView
+        <onart.pack.pen2pc.DefaultPaint
             android:id="@+id/paintSheet"
-            android:name="onart.pack.pen2pc.PaintSheet"
+            android:background="#ffffff"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#ffffff"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
