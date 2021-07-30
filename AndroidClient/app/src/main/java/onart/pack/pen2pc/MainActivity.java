@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        cf.load(getPreferences(Context.MODE_PRIVATE));
-
+        TextView tv=findViewById(R.id.textView);
+        cf=new Config(getPreferences(Context.MODE_PRIVATE));
         /*
         findViewById(R.id.term).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,7 +31,11 @@ public class MainActivity extends AppCompatActivity {
         });
         람다 표현식 사용 전*/
         findViewById(R.id.term).setOnClickListener(v -> finish());
-        findViewById(R.id.start).setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), Board.class)));
+        findViewById(R.id.config).setOnClickListener(v -> startActivity(new Intent(getApplicationContext(),Configuration.class)));
+        findViewById(R.id.start).setOnClickListener(v -> {
+            if(cf.getCMethod()==0) startActivity(new Intent(getApplicationContext(),Configuration.class));
+            else startActivity(new Intent(getApplicationContext(), Board.class));
+        });
     }
 
     @Override

@@ -21,6 +21,7 @@ public class Board extends AppCompatActivity {
 
     private DefaultPaint paintSheet;
     private boolean isLand;
+    private Thread com;
     public static int xmaxp=0, ymaxp=0, xmaxl=0, ymaxl=0;
 
     @Override
@@ -43,7 +44,6 @@ public class Board extends AppCompatActivity {
         findViewById(R.id.eraser2).setOnClickListener(v -> paintSheet.erase());
         paintSheet=findViewById(R.id.paintSheet);
         //1. PC 연결
-
         //2. 스레드 시작
         //3. 스레드 종료
     }
@@ -105,5 +105,11 @@ public class Board extends AppCompatActivity {
             }
         }
         paintSheet.setLayoutParams(lp);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
     }
 }

@@ -1,8 +1,6 @@
 package onart.pack.pen2pc;
 
-import java.net.Socket;
 import java.util.LinkedList;
-import java.util.logging.SocketHandler;
 
 public abstract class Communicator {
 
@@ -12,12 +10,16 @@ public abstract class Communicator {
         buf=new LinkedList<>();
     }
 
-    public void accumulate(short x, short y){
+    public void accumulate(short x, short y){   //sync
         buf.add(x);
         buf.add(y);
     }
 
-    public abstract void send();    //보낼 정보: 터치 지점, 내부 영역
-    public abstract void recv();    //받을 정보: 영향을 받을 window 영역
+    int f2b(float f){
+        return Float.floatToIntBits(f);
+    }
+
+    public abstract void send();    //sync
+    public abstract void recv();
     public abstract void echo();
 }

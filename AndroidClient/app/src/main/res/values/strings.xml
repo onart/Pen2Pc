@@ -3,14 +3,19 @@
     <string name="appName">Pen2Pc</string>
     <string name="subTitle">핸드폰 터치를 마우스 입력으로</string>
     <string name="start">시작하기</string>
-    <string name="config">환경설정</string>
+    <string name="config">PC 연결 방식 설정</string>
     <string name="term">종료</string>
     <string name="on">궤적 OFF</string>
     <string name="off">궤적 ON</string>
     <string name="eraser">궤적 지우기</string>
     <string name="yes">예</string>
+    <string name="confirm">확인</string>
     <string name="no">아니요</string>
     <string name="sure2erase">정말로 지울까요?</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="usb">USB 케이블 연결</string>
+    <string name="blue">블루투스 연결</string>
+    <string name="inet">인터넷 연결</string>
+    <string name="lan">LAN 연결</string>
+    <string name="anne">(URL)에서 PC용 프로그램을 받아 주시고,
+아래와 같은 세팅이 필요합니다.</string>
 </resources>

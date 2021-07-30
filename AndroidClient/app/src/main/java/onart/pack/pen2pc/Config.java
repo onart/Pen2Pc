@@ -4,6 +4,7 @@ import android.content.SharedPreferences;
 
 public class Config {
     public enum connection {NOTSET,WIRED,BLUE,INET,P2P}
+    SharedPreferences sp;
     String address;
     int cMethod;
 
@@ -11,17 +12,23 @@ public class Config {
         return cMethod;
     }
 
-    void setcMethod(connection c){
-        cMethod=c.ordinal();
+    public Config(SharedPreferences sp){
+        this.sp=sp;
+        load();
     }
 
-    public void save(SharedPreferences sharedPref){
-        SharedPreferences.Editor editor=sharedPref.edit();
-        editor.putInt("connection",cMethod);
+    void setcMethod(connection c){
+        cMethod=c.ordinal();
+        save();
+    }
+
+    void save(){
+        SharedPreferences.Editor editor=sp.edit();
+        editor.putInt("NecTConIoN",cMethod);
         editor.apply();
     }
 
-    public void load(SharedPreferences sharedPref){
-        cMethod=sharedPref.getInt("NecTConIoN", connection.NOTSET.ordinal());
+    void load(){
+        cMethod=sp.getInt("NecTConIoN", connection.NOTSET.ordinal());
     }
 }
