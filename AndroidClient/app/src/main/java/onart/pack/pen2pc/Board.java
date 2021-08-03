@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentContainer;
 import androidx.fragment.app.FragmentContainerView;
 
 import android.content.res.Configuration;
+import android.hardware.usb.UsbManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;

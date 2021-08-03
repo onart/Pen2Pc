@@ -1,12 +1,14 @@
 package onart.pack.pen2pc;
 
+import android.app.Activity;
+
 import java.util.LinkedList;
 
 public abstract class Communicator {
 
     protected LinkedList<Short> buf;
 
-    Communicator(Object info){
+    Communicator(Activity info){
         buf=new LinkedList<>();
     }
 

@@ -19,8 +19,10 @@
             <intent-filter>
                 <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"/>
             </intent-filter>
+            <!--
             <meta-data android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
                 android:resource="@xml/device_filter"/>
+                -->
         </activity>
         <activity android:name=".Configuration" />
         <activity android:name=".MainActivity">
